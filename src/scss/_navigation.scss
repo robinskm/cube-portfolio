@@ -13,10 +13,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @media(max-width:$screen-sm-max) {  
-        top: 60px;
-    }
-    @media(max-width:$screen-xs-max) {  
+    @include small-tablet {  
+        top: 30px;
         width: 60px;
         height: 50px;
     }
@@ -28,11 +26,8 @@
             font-size:55px;
             text-shadow: 0px 2px 3px $light-gray;
             position:relative;
-            @media(max-width:$screen-sm-max) {
-                font-size:13vw;
-            }
-            @media(max-width:$screen-xs-max) {
-                font-size:10vw;
+            @include mobile-portrait {  
+                font-size:calc(#{$h2-size} - 20px);
             }
         }
     }
@@ -150,7 +145,7 @@
                 float:none;
                 width:100%;
                 text-align:center;
-                border-left:5px solid $white;
+                border-left:5px solid transparent;
                 position:relative;
                 left:0;
                 cursor:pointer;

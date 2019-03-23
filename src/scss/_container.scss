@@ -15,6 +15,9 @@
       
       @include transform('rotate(-45deg)');
       @include animate;
+      @include small-tablet {
+          border:none !important;
+      }
     }
     .up {
       top: -75px;
@@ -30,9 +33,6 @@
       bottom: -20px;
       border-bottom-color: $light-gray;
       border-left-color: $light-gray;
-      @media(max-width:$screen-sm-max) {
-          bottom:5px;
-      }
     }
 
     .container {
@@ -43,11 +43,12 @@
         
         @include animate;
         @include transform('translate(0%, 150px)');
-        @media(max-width:$screen-md-max) {    
+        @include small-tablet {    
             @include transform('translate(0, 100px)');
         }
-        @media(max-width:$screen-sm-max) {    
-            @include transform('translate(0, 10%)');
+        @include mobile-portrait {    
+            @include transform('translate(0, 0)');
+            margin: 0 5%;
         }
         i {
             cursor: pointer;
@@ -61,11 +62,13 @@
             float: left;
             
             @include animate;
-            @media(max-width:$screen-sm-max) {
-                margin: 30px 40px 0 0;
+            @include small-tablet {
+                margin: 30px 0;
+                float:none;
                 display: flex;
                 align-items: center;
-                width:auto;
+                justify-content: center;
+                width:initial;
             }
             h2 {
                 &:after {
