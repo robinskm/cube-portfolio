@@ -1,0 +1,105 @@
+
+#wrapper {
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+  
+    .up, .down {
+      cursor: pointer;
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left:50%;
+      border: 2px solid transparent;
+      transform: rotate(-45deg);
+      -webkit-transition: all 350ms cubic-bezier(.25,.65,.85,1);
+      -moz-transition: all 350ms cubic-bezier(.25,.65,.85,1);
+      -ms-transition: all 350ms cubic-bezier(.25,.65,.85,1);
+      -o-transition: all 350ms cubic-bezier(.25,.65,.85,1);
+      transition: all 350ms cubic-bezier(.25,.65,.85,1);
+    }
+    .up {
+      top: -75px;
+      border-top-color: $light-gray;
+      border-right-color: $light-gray;
+      @media(max-width:$screen-sm-max) {
+          top:-15px;
+      }
+    }
+    
+    .down {
+      bottom: -20px;
+      border-bottom-color: $light-gray;
+      border-left-color: $light-gray;
+      @media(max-width:$screen-sm-max) {
+          bottom:5px;
+      }
+    }
+
+    .container {
+        transform: translate(0%, 150px);
+        //height: 200px;
+        border: 1px solid transparent;
+        position: relative;
+        margin: 0 10%;
+        -webkit-transition: all 350ms cubic-bezier(.25,.65,.85,1);
+        -moz-transition: all 350ms cubic-bezier(.25,.65,.85,1);
+        -ms-transition: all 350ms cubic-bezier(.25,.65,.85,1);
+        -o-transition: all 350ms cubic-bezier(.25,.65,.85,1);
+        transition: all 350ms cubic-bezier(.25,.65,.85,1);
+        @media(max-width:$screen-md-max) {    
+            transform: translate(0, 100px);
+        }
+        @media(max-width:$screen-sm-max) {    
+            transform: translate(0, 10%);
+        }
+        i {
+            cursor: pointer;
+        }
+        .header {
+            cursor: pointer;
+            text-align: right;
+            margin: 60px 40px 0 0;
+            height: auto;
+            width:245px;
+            float: left;
+            -webkit-transition: all 350ms cubic-bezier(.25,.65,.85,1);
+            -moz-transition: all 350ms cubic-bezier(.25,.65,.85,1);
+            -ms-transition: all 350ms cubic-bezier(.25,.65,.85,1);
+            -o-transition: all 350ms cubic-bezier(.25,.65,.85,1);
+            transition: all 350ms cubic-bezier(.25,.65,.85,1);
+            @media(max-width:$screen-sm-max) {
+                margin: 30px 40px 0 0;
+                display: flex;
+                align-items: center;
+                width:auto;
+            }
+            h2 {
+                &:after {
+                    content:".";
+                    position: absolute;
+                    right:-17px;
+                    text-shadow: 0px 2px 3px $light-gray;
+                    @media(max-width:$screen-sm-max) {
+                        right:initial;
+                    }
+                }
+            }
+        }
+        &:after {
+            content: " ";
+            width: 100%;
+            display: block;
+            clear: both;
+        }
+      }
+
+}
+
+.case-studies {
+    display:none;
+}
+.portfolio {
+    display:block;
+}
