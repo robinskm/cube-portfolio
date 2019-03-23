@@ -53,17 +53,11 @@
                 }
                 
                 &:nth-child(2) {
-                  -webkit-transform: rotate(45deg);
-                  -moz-transform: rotate(45deg);
-                  -o-transform: rotate(45deg);
-                  transform: rotate(45deg);
+                    @include transform('rotate(45deg)');
                 }
                 
                 &:nth-child(3) {
-                  -webkit-transform: rotate(-45deg);
-                  -moz-transform: rotate(-45deg);
-                  -o-transform: rotate(-45deg);
-                  transform: rotate(-45deg);
+                    @include transform('rotate(-45deg)');
                 }
                 
                 &:nth-child(4) {
@@ -90,11 +84,7 @@
         width:30px;
         height:30px;
         margin:15px auto;
-        position: relative;
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
+        @include transform('rotate(0deg)');
         -webkit-transition: .5s ease-in-out;
         -moz-transition: .5s ease-in-out;
         -o-transition: .5s ease-in-out;
@@ -113,10 +103,7 @@
             opacity: 1;
             left: 0;
             top:10px;
-            -webkit-transform: rotate(0deg);
-            -moz-transform: rotate(0deg);
-            -o-transform: rotate(0deg);
-            transform: rotate(0deg);
+            @include transform('rotate(0deg)');
             -webkit-transition: .25s ease-in-out;
             -moz-transition: .25s ease-in-out;
             -o-transition: .25s ease-in-out;
@@ -201,7 +188,7 @@
                     height: 45px;
                 }
                 &:hover {
-                    transform: translateX(-10px);
+                    @include transform('translateX(-10px)');
                     border-left:5px solid;
                     -webkit-animation: color-change-4x 6s linear infinite alternate both;
                     animation: color-change-4x 6s linear infinite alternate both;

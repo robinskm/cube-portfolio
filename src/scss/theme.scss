@@ -1,8 +1,10 @@
-@import 'settings.scss';
+@import '_settings.scss';
+@import '_mixins.scss';
 
-@import 'animation.scss';
-@import 'case-studies.scss';
-@import 'container.scss';
-@import 'detail.scss';
-@import 'navigation.scss';
-@import 'style.scss';
+@import '_animation.scss';
+@import '_case-studies.scss';
+@import '_container.scss';
+@import '_detail.scss';
+@import 'modal.scss';
+@import '_navigation.scss';
+@import '_style.scss';

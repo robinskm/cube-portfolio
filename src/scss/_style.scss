@@ -31,9 +31,6 @@ ul {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    /* @media(max-width:$screen-sm-max) {
-        padding-top:4vw;
-    } */
     li {
         list-style-type: none;
         height:100%;
@@ -133,11 +130,20 @@ img {
     }
 }
 
+.reader {
+    position: absolute;
+    left: -9000px;
+    width: 0;
+    overflow: hidden;
+}
+
 .button {
     margin-top:30px;
     display:block;
     font-weight:700;
+    cursor:pointer;
     span {
+        font-size:32px;
         letter-spacing:0;
         border: 1px solid $gray;
         padding: 0 20px;
@@ -146,6 +152,9 @@ img {
         -ms-transition: all .2s cubic-bezier(.25,.65,.85,1);
         -o-transition: all .2s cubic-bezier(.25,.65,.85,1);
         transition: all .2s cubic-bezier(.25,.65,.85,1);
+        @include small-tablet {
+            font-size:5vw;
+        }
     }
     &:hover {
         span {

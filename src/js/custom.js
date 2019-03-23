@@ -41,6 +41,17 @@ function rotateCube(num, nav, rotate) {
     cube.on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function() {
       panel.removeClass('shadow');
     });
+    
+    if(i == 1) {
+        $('.up').fadeOut();
+    } else {
+        $('.up').fadeIn();
+    }
+    if(i == 4) {
+        $('.down').fadeOut();
+    } else {
+        $('.down').fadeIn();
+    }
 }
 
 $(document).ready(function(){
@@ -56,14 +67,15 @@ $(document).ready(function(){
     });
     $('.up').click(function() {
         $('#details').addClass('rotateDown').removeClass('rotateUp');
-      if( 1 > i - 1) { i = 4; } else { --i; }
-      rotateCube(i, false, -90);
+        if( 1 > i - 1) { 
+            i = 4; } else { --i; rotateCube(i, false, -90);}
     });
     $('.down').click(function() {
         $('#details').addClass('rotateUp').removeClass('rotateDown');
         if (i > 3 ) { i = 1; } else { i++; }
         rotateCube(i, false, 90);
     });
+
     $('.exit-case-studies, .header').click(function(){
         $('body').attr('id', '');
         $('.detail').each(function(){

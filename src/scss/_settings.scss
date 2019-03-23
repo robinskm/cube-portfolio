@@ -1,4 +1,4 @@
-//Colors
+// colors
 $red: #e5523b;
 $green: #9dce5c;
 $blue: #38c6d8;
@@ -8,7 +8,13 @@ $gray:#606060;
 $black: #000;
 $white: #fcfcfc;
 
-//Viewports
+// viewports
 $screen-md-max: 1024px;
 $screen-sm-max: 812px;
 $screen-xs-max: 480px;
+
+// screen sizes
+$large-tablet-width: 1024px;
+$small-tablet-width: 768px;
+$mobile-landscape-width: 812px;
+$mobile-portrait-width: 420px;
