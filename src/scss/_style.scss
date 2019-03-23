@@ -59,11 +59,8 @@ ul {
 }
 
 i {
-    -webkit-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    -moz-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    -ms-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    -o-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    transition: all 350ms cubic-bezier(.25,.65,.85,1);
+    
+    @include animate;
 }
 
 h2 {
@@ -72,11 +69,8 @@ h2 {
     font-size: 65px;
     font-weight: 900;
     margin: 0;
-    -webkit-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    -moz-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    -ms-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    -o-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    transition: all 350ms cubic-bezier(.25,.65,.85,1);
+    
+    @include animate;
     @media(max-width:$screen-sm-max) {
         font-size: 15vw;
         line-height: 13vw;
@@ -88,11 +82,8 @@ h3 {
     font-size: 28px;
     line-height: 35px;
     margin-bottom: 10px;
-    -webkit-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    -moz-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    -ms-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    -o-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    transition: all 350ms cubic-bezier(.25,.65,.85,1);
+    
+    @include animate;
     @media(max-width:$screen-sm-max) {
         font-size:7vw;
         line-height: 8vw;
@@ -103,11 +94,8 @@ p {
     font-weight: 400;
     font-size: 18px;
     letter-spacing: -1px;
-    -webkit-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    -moz-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    -ms-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    -o-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-    transition: all 350ms cubic-bezier(.25,.65,.85,1);
+    
+    @include animate;
     @media(max-width:$screen-sm-max) {
         font-size:5vw;
         line-height:6vw;

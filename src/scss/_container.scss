@@ -14,11 +14,7 @@
       border: 2px solid transparent;
       
       @include transform('rotate(-45deg)');
-      -webkit-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-      -moz-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-      -ms-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-      -o-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-      transition: all 350ms cubic-bezier(.25,.65,.85,1);
+      @include animate;
     }
     .up {
       top: -75px;
@@ -40,16 +36,13 @@
     }
 
     .container {
-        @include transform('translate(0%, 150px)');
         //height: 200px;
         border: 1px solid transparent;
         position: relative;
         margin: 0 10%;
-        -webkit-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-        -moz-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-        -ms-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-        -o-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-        transition: all 350ms cubic-bezier(.25,.65,.85,1);
+        
+        @include animate;
+        @include transform('translate(0%, 150px)');
         @media(max-width:$screen-md-max) {    
             @include transform('translate(0, 100px)');
         }
@@ -66,11 +59,8 @@
             height: auto;
             width:245px;
             float: left;
-            -webkit-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-            -moz-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-            -ms-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-            -o-transition: all 350ms cubic-bezier(.25,.65,.85,1);
-            transition: all 350ms cubic-bezier(.25,.65,.85,1);
+            
+            @include animate;
             @media(max-width:$screen-sm-max) {
                 margin: 30px 40px 0 0;
                 display: flex;
